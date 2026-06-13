@@ -1,0 +1,13 @@
+[build]
+builder = "dockerfile"
+
+[deploy]
+startCommand = "./start.sh"
+
+[services]
+  [services.app]
+    source = "."
+
+  [services.db]
+    type = "mysql"
+    version = "8.0"
